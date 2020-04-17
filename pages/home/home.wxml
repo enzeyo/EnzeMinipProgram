@@ -1,3 +1,5 @@
 <!--pages/home/home.wxml-->
 <text id="title">Hello Word</text>
 <button size="mini">Btn</button>
+<view>知识点1</view>
+<view>Enze Test</view>
