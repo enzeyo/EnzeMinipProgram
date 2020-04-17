@@ -1,3 +1,6 @@
 <!--pages/home/home.wxml-->
 <text id="title">Hello Word</text>
 <button size="mini">Btn</button>
+
+<view>tag 2</view>
+<view>Enze Test</view>
