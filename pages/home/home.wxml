@@ -1,3 +1,12 @@
 <!--pages/home/home.wxml-->
-<text id="title">Hello Word</text>
-<button size="mini">Btn</button>
+<!--1. 小程序的数据绑定  {{ }} Mustache 语法-->
+<view>Hello {{name}}</view>
+<view>My age is: {{age}}</view>
+
+<!-- 2. 列表展示  wx:for="{{students}}"-->
+<view wx:for="{{students}}">id: {{item.id}} name:{{item.name}}  age:{{item.age}}  city:{{item.city}} </view>
+
+<!-- 3.事件监听 data -->
+<view>当前级数：{{counter}}</view>
+<button size="mini" class="add" bindtap="handaddBtnClick">+</button>
+<button size="mini" class="cut" bindtap="handcutBtnClick">-</button>

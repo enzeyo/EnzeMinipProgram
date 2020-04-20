@@ -1,5 +1,11 @@
 /* pages/home/home.wxss */
-#title{
+.add {
   color: red;
   font-size: 20rpx;
+  width: 20px;
+}
+.cut {
+  color: rgb(47, 144, 255);
+  font-size: 20rpx;
+  width: 20px;
 }

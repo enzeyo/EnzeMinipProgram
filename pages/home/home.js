@@ -1,14 +1,31 @@
 // pages/home/home.js
 Page({
-
+  
   /**
    * 页面的初始数据
    */
   data: {
-
+    name:'Enze',
+    age:18,
+    students:[
+      { id: 1, name: 'ciogg', age: 18, city: 'QiXian'},
+      { id: 2, name: 'cioyo', age: 19, city: 'Jinzhong'},
+      { id: 3, name: 'Enze', age: 20, city: 'ShanXi'},
+      { id: 4, name: 'Laze', age: 21, city: 'CHina'}
+    ],
+    counter:0
   },
-
-  /**
+  handaddBtnClick(){
+    this.setData({
+      counter: this.data.counter+1
+    })
+  },
+  handcutBtnClick(){
+    this.setData({
+      counter: this.data.counter-1
+    })
+  },
+    /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
