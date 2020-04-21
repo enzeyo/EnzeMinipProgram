@@ -1,0 +1,30 @@
+<!--pages/image/image.wxml-->
+<!-- 1. image 基本使用 -->
+<!-- 
+  重点：
+  1.image可写为但标签,也可为双标签
+  2.image默认大下：320 * 240
+
+ -->
+ <!-- <image/> -->
+
+<!-- 2. img src 本地(相对路径/绝对路径)/远程地址 -->
+<image src='../../assets/img/6.jpg'/>
+<image src='/assets/img/6.jpg'/>
+<image src='https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg'/>
+
+<!-- 3. 相册图片 -->
+<button bindtap="handleChooseAlbun">选中图片</button>
+<image src="{{imagePath}}" />
+
+<!-- 4. bindload 当图片载入完毕时触发 -->
+<!--    lazy-load 懒加载 -->
+<text>------------------------------------</text>
+<image wx:for="{{10}}" 
+      src='https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg'
+      bindload="handleImageLoad" 
+      lazy-load />
+<!-- 5. show-menu-by-longpress  长按图片进行识别 -->
+<image 
+      show-menu-by-longpress
+      src="https://res.wx.qq.com/wxdoc/dist/assets/img/0.4cb08bb4.jpg" />
