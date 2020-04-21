@@ -4,9 +4,20 @@
 <view>My age is: {{age}}</view>
 
 <!-- 2. 列表展示  wx:for="{{students}}"-->
-<view wx:for="{{students}}">id: {{item.id}} name:{{item.name}}  age:{{item.age}}  city:{{item.city}} </view>
+<!-- <view wx:for="{{students}}">id: {{item.id}} name:{{item.name}}  age:{{item.age}}  city:{{item.city}} </view> -->
 
-<!-- 3.事件监听 data -->
+<!-- 3.事件监听 bindtap
+    setData({})  --数据传值到页面
+ -->
 <view>当前级数：{{counter}}</view>
 <button size="mini" class="add" bindtap="handaddBtnClick">+</button>
 <button size="mini" class="cut" bindtap="handcutBtnClick">-</button>
+<button
+    bindgetuserinfo="handlegetUserInfo"
+    open-type="getUserInfo"
+    size="mini">
+  获取授权
+</button>
+<open-data type="userNickName"></open-data>
+<open-data type="userAvatarUrl"></open-data>
+<view wx:for="{{list}}">id: {{item.title}}</view>

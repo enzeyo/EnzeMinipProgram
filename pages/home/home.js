@@ -1,12 +1,18 @@
 // pages/home/home.js
+//getApp()获取App()产生的实例对象
+const app = getApp();
+const name = app.globaData.name;
+const age = app.globaData.age;
+
 Page({
   
   /**
    * 页面的初始数据
    */
   data: {
-    name:'Enze',
-    age:18,
+    list:[],
+    name:name,
+    age:age,
     students:[
       { id: 1, name: 'ciogg', age: 18, city: 'QiXian'},
       { id: 2, name: 'cioyo', age: 19, city: 'Jinzhong'},
@@ -25,11 +31,23 @@ Page({
       counter: this.data.counter-1
     })
   },
+  handlegetUserInfo(event){
+    console.log(event)
+  },
     /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    wx.request({
+      url: 'http://123.207.32.32:8080/recommend',
+      success:(res) =>{
+        console.log(res)
+        const data = res.data.data.list;
+        this.setData({
+          list : data
+        })
+      }
+    })
   },
 
   /**
