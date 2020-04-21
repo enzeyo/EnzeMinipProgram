@@ -1,5 +1,6 @@
 {
   "pages": [
+    "pages/input/input",
     "pages/home/home",
     "pages/about/about"
   ]

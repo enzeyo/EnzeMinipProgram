@@ -1,0 +1,40 @@
+<!--pages/input/input.wxml-->
+<!-- 1. input 基本使用 -->
+<input />
+
+<!-- 2. input: value属性 -->
+<input value="Hello" />
+
+<!-- 3. input: type属性 
+        type: text文本输入键盘
+        type: number数字输入键盘
+        type: idcard身份子输入键盘
+        type: digit带小数点的数字键盘
+-->
+<input type="text" />
+<input type="number" />
+<input type="idcard" />
+<input type="digit" />
+
+<!-- 4. password 暗文 -->
+<input password/>
+
+<!-- 5. placeholder 占位文字 -->
+<input placeholder='请输入关键文字'/>
+
+<!-- 6. maxlength  设置最大长度 -->
+<input maxlength='11' placeholder='请输入正确手机号' />
+
+<!-- 7. confirm-type 设置键盘右下角按钮的文字，仅在type='text'时生效 -->
+<input type="text"  confirm-type/>
+
+<!-- 8. input 绑定监听 
+              bindinput 键盘输入时触发
+              bindfocus 输入框聚焦时触发
+              bindblur  输入框失去焦点时触发
+              bindconfirm 点击完成按钮时触发
+              bindkeyboardheightchange  键盘高度发生变化的时候触发此事件
+-->
+<input bindinput="handleInput"
+       bindfocus="handleFocus"
+       bindblur="handleBlur"/>
