@@ -1,0 +1,23 @@
+/* pages/view/view.wxss */
+.box {
+  background: green;
+}
+.box1 {
+  width: 100px;
+  height: 100px;
+  background: paleturquoise;
+}
+.hover-class {
+  background: pink;
+  font-size: 30px;
+  
+}
+.box2 { 
+  margin-top: 20px;
+  width: 200px;
+  height: 200px;
+  background: red;
+}
+.box2-hover {
+  background:yellow;
+}

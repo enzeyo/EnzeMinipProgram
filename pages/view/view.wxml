@@ -1,0 +1,17 @@
+<!--pages/view/view.wxml-->
+<!-- 1 view 基本使用  容器组件-->
+<view class="box">HEllo</view>
+<view>Hi</view>
+
+<!-- 2 hover-class 用户操作时显示其样式 -->
+<view class="box1" hover-class="hover-class" hover-stay-time="700">HEllo</view>
+
+<view class="box2" hover-class="box2-hover">
+  <view class="box1" 
+    hover-class="hover-class" 
+    hover-stay-time="700"
+    hover-stop-propagation>
+      HEllo
+  </view>
+    
+</view>
