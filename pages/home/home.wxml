@@ -1,3 +1,19 @@
 <!--pages/home/home.wxml-->
 <text id="title">Hello Word</text>
 <button size="mini">Btn</button>
+<text>\n你好小程序 \n</text>
+
+<!-- 2.selectable:true -->
+<!-- 默认情况下text中的文本长按是不能选择的  -->
+<text selectable>Hello Enze\n</text>
+
+<!-- 3.设置空格大小
+    ensp 半个中文字符大小
+    emsp 一个中文字符大小
+ -->
+<text space="nbsp">Hello ciogg\n</text>
+<text space="ensp">Hello ciogg\n</text>
+<text space="emsp">Hello ciogg\n</text>
+
+<!-- 4.decode 是否解码文本 -->
+<text decode>5 &gt; 3</text>
