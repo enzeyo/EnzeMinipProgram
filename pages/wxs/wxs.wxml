@@ -1,0 +1,36 @@
+<!--pages/wxs/wxs.wxml-->
+<!-- wxs 定义 -->
+<!-- 1 直接当前页面使用 -->
+<wxs module='info'> 
+//js代码
+//定义
+var message = 'HEllo Enze';
+var name = 'coderciogg';
+
+var sun = function(num1,num2){
+  return num1 + num2
+}
+//写入
+module.exports={
+  message:message,
+  name:name,
+  sun:sun
+}
+</wxs>
+
+<view>{{info.message}}</view>
+<view>{{info.name}}</view>
+<view>{{info.sun(10,20)}}</view>
+
+<!-- 2. 导入使用 -->
+<view>--------引用--------------</view>
+<wxs src="../../pages/wxs/info.wxs" module='info1' />
+
+<view>{{info1.message}}</view>
+<view>{{info1.name}}</view>
+<view>{{info1.sun(10,20)}}</view>
+
+<!-- wxs应用 -->
+<wxs src="../../pages/wxs/format.wxs" module='format' />
+<view>{{format.priceFormat(price)}}</view>
+<view>{{format.dateFormat(date,'yyyy-MM-dd,hh:mm:ss')}}</view>

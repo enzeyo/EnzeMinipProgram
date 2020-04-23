@@ -1,0 +1,14 @@
+//js代码
+//定义
+var message = 'HEllo Enze';
+var name = 'coderciogg';
+
+var sun = function (num1, num2) {
+  return num1 + num2
+}
+//写入
+module.exports = {
+  message: message,
+  name: name,
+  sun: sun
+}
