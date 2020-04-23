@@ -1,0 +1,6 @@
+@import './style/btn.wxss';
+.container {
+  /* important 最大权重值，最先考虑此 */
+  color: purple !important;
+  font-size: 22px;
+}

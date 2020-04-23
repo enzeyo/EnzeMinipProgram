@@ -1,0 +1,89 @@
+<!--pages/wxss/wxss.wxml-->
+<!-- wxss 样式 -->
+<!-- 1.行内样式（内联） 当前页面-->
+<view style="color:red; font-size:30px;">Hello</view>
+
+<!-- 2.页面样式 wxss页面中-->
+<view class="box">Hi</view>
+
+<!-- 3.全局样式  app.wxss页面中-->
+<view style="color:red;" class="container">Ciogg</view>
+
+<!-- 4. rpx与px区别 -->
+<view id='box1'></view>
+<view id="box2"></view>
+<button class="btn" bindtap="handleSwitchColor">换颜色</button>
+
+<!-- 5. 使用官方样式 -->
+<!-- 
+首先在官方代码中
+找 example -> searchbar -> searchbar.wxml 中复制所需
+找 example -> searchbar -> searchbar.js 中复制到自己的目录中  
+找 style->widget->weui-searchbar->weui-searchbar.wxss 然后复制到自己的目录中最后进行引用
+-->
+<view class="weui-search-bar {{inputShowed ? 'weui-search-bar_focusing' : ''}}" id="searchBar">
+  <form class="weui-search-bar__form">
+    <view class="weui-search-bar__box">
+      <i class="weui-icon-search"></i>
+        <input type="text" class="weui-search-bar__input" placeholder="搜索" value="{{inputVal}}" focus="{{inputShowed}}" bindinput="inputTyping" />
+        <span class="weui-icon-clear" wx:if="{{inputVal.length > 0}}" bindtap="clearInput"></span>
+    </view>
+    <label class="weui-search-bar__label" bindtap="showInput">
+      <i class="weui-icon-search"></i>
+        <span class="weui-search-bar__text">搜索</span>
+    </label>
+  </form>
+  <view class="weui-search-bar__cancel-btn" bindtap="hideInput">取消</view>
+</view>
+
+<!-- {{}} Mustache语法 -->
+<!-- 正常展示 -->
+<view>{{message}}</view>
+<!-- 中间空格 -->
+<view>{{message}} {{message}}</view>
+<view>{{message + ' ' + message}}</view>
+<!-- 选择性展示 -->
+<view>{{age >= 18 ? '成年' : '未成年'}}</view>
+
+<!-- 时间展示 -->
+<view class="{{isActive ? 'active' : ''}}">{{NowTime}}</view>
+
+<!-- 是否展示 wx:if-->
+<view wx:if='{{isShow}}'>Hi</view>
+<button class="btn" bindtap="handleSwitchShow">切隐显</button>
+
+<!-- 判断展示  wx:elseif/wx:else -->
+<view wx:if="{{score >= 90}}">优</view>
+<view wx:elif="{{score >= 80}}">良</view>
+<view wx:elif="{{score >=60}}">中</view>
+<view wx:else="{{score <60}}">差</view>
+
+<!-- 导入文件的方式 -->
+  <!-- improt 导入
+  1.主要是导入template
+  2.不能递归
+ 
+<import src='' />
+  -->
+  <!-- include 导入 
+    1.讲公共的wxml中的组件抽取到页面当中
+    2.不能导入template/wxss，可以递归
+  
+<include src='' />
+  -->
+
+
+<!-- template   基本使用-->
+<!-- template包着内容，在没有被使用之前是不会渲染的 -->
+<!-- 直接 -->
+<template name="contentItem">
+  <button class="btn">Hi</button>
+  <view>Hello</view>
+</template>
+<template is="contentItem" />
+<!-- 可以转入值方式 -->
+<template name="contentItem1">
+  <button class="btn">{{BtnText}}</button>
+  <view>{{content}}</view>
+</template>
+<template is="contentItem1" data="{{BtnText:'警告',content:'呵呵呵'}}"/>
