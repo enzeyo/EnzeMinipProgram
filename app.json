@@ -1,6 +1,8 @@
 {
   "pages": [
+    "pages/tabbar/tabbar",
     "pages/home/home",
     "pages/about/about"
-  ]
+  ],
+  "sitemapLocation": "sitemap10.json"
 }
