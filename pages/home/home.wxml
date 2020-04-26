@@ -1,3 +1,9 @@
 <!--pages/home/home.wxml-->
 <text id="title">Hello Word</text>
 <button size="mini">Btn</button>
+
+<!--1. 使用自定义组件传递数据/样式  -->
+<!-- <my-cpn />   -->
+<my-style />  
+<my-prop  title='hahah' titleClass="blue" /> 
+<my-prop  titleClass="green"/> 

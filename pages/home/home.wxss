@@ -3,3 +3,9 @@
   color: red;
   font-size: 20rpx;
 }
+.green {
+  color: green;
+}
+.blue {
+  color: blue
+}
