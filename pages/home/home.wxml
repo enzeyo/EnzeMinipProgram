@@ -6,4 +6,44 @@
 <!-- <my-cpn />   -->
 <my-style />  
 <my-prop  title='hahah' titleClass="blue" /> 
-<my-prop  titleClass="green"/> 
+<my-prop  titleClass="green"/>
+
+<!-- 4. 组件内部发出事件 -->
+<view>当前计数：{{counter}}</view>
+<my-event  bind:increment='handleIncrement' /> 
+
+<!-- 5. tab-control的练习 -->
+<w-tab-control titles="{{['衣服','鞋子','裤子']}}"
+               bind:itemclick="handleTabClick"/>
+
+<!-- 6.  -->
+<button size="mini" bind:tap="handleIncrementCpn">修改组件内数据</button>
+<my-sel  class="sel-class"/>
+
+<!-- 7.1  插槽使用（单个）-->
+<view>------------------</view>
+<my-slot>
+  <button size="mini">我是插入的按钮</button>
+</my-slot>
+
+<my-slot>
+  <text>我是插入文字</text>
+</my-slot>
+
+<my-slot>
+  <image  src="http://pic1.sc.chinaz.com/Files/pic/pic9/202004/zzpic24575_s.jpg" />
+</my-slot>
+
+<my-slot>
+  <slider value="60"></slider>
+</my-slot>
+
+<!-- 7.2 多个插槽使用 -->
+<button size="mini" bind:tap="handleChangeShow">切换显示</button>
+<block wx:if="{{isShow}}">
+  <my-mslot>
+    <button size="mini" slot="slot3">我是插入的按钮</button>
+    <slider slot="slot1" value="30"></slider>
+    <view slot="slot2">HEllo</view>
+  </my-mslot>
+</block>
