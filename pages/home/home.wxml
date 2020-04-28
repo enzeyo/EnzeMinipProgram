@@ -1,3 +1,29 @@
 <!--pages/home/home.wxml-->
 <text id="title">Hello Word</text>
 <button size="mini">Btn</button>
+<!-- 1. navigator页面跳转 -->
+<navigator url="/pages/detail/detail">跳转</navigator>
+<!-- 2. navigator属性 
+  open-type='redirect'
+  关闭当前页，跳转应用内的某个页面，不可跳转至tabbar
+-->
+<navigator url="/pages/detail/detail"
+            open-type="redirect">
+  跳转详情页(redirect)
+</navigator>
+<!-- 3. navigator属性
+  open-type:='switchtab' 
+  跳转到tabbar页面，并关闭其他非tabbar页面，需要定义tabBar
+-->
+<navigator url="/pages/about/about"
+           open-type="switchTab">
+  跳转关于页
+</navigator>
+<!-- 4. navigator属性
+  open-type="reLaunch"
+  关闭所有页面，打开指定页面
+ -->
+ <navigator url="/pages/detail/detail"
+            open-type="reLaunch">
+  跳转详情页面
+ </navigator>
