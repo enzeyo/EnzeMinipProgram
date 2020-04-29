@@ -27,3 +27,12 @@
             open-type="reLaunch">
   跳转详情页面
  </navigator>
+
+<!-- 5. 页面跳转并携带参数 -->
+ <navigator url="/pages/detail/detail?name=enze&age=18&height=1.88">
+ 跳转详情页面(参数)
+ </navigator>
+ <view>{{name}}</view>
+
+<!-- 6. 按钮跳转 -->
+  <button size="mini" bind:tap="handlePushDetail">跳转</button>

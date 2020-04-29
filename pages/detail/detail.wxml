@@ -1,2 +1,4 @@
 <!--pages/detail/detail.wxml-->
 <text>pages/detail/detail.wxml</text>
+<navigator open-type="navigateBack" delta="1">返回</navigator>
+<button size="mini" bind:tap="handleBackHome">返回</button>
